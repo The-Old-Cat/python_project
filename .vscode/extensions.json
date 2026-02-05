@@ -1,0 +1,28 @@
+{
+    "recommendations": [
+        // --- Искусственный интеллект и помощь в написании кода ---
+        "Codeium.codeium", // Бесплатный автокомплит и чат (аналог Copilot)
+        "Codium.codium", // Генерация тестов, анализ кода и поиск багов
+        "qwenlm.qwen-code-vscode-ide-companion", // Интеллектуальная помощь Qwen в написании кода
+        // --- Python разработка ---
+        "ms-python.python", // Основная поддержка Python (отладка, IntelliSense)
+        "ms-python.vscode-pylance", // Быстрый и мощный движок анализа кода для Python
+        "ms-python.black-formatter", // Форматирование кода по стандарту PEP 8
+        "ms-python.pylint", // Линтер (проверка кода на ошибки и стилистику)
+        "mikestead.dotenv", // Поддержка файлов .env (подсветка секретов проекта)
+        "ms-python.debugpy", // Позволяет дебажить тесты
+        "ms-python.black-formatter", // Форматирование кода по стандарту PEP 8
+        // --- Django и веб-шаблоны ---
+        "batisteo.vscode-django", // Подсветка синтаксиса и сниппеты для Django шаблонов
+        // --- Верстка (HTML / CSS) ---
+        "formulahendry.auto-rename-tag", // Автоматически переименовывает парный HTML-тег
+        "pranaygp.vscode-css-peek", // Быстрый переход к определению CSS классов прямо из HTML
+        "ritwickdey.liveserver", // Локальный сервер с автообновлением страницы при сохранении
+        "naumovs.color-highlight", // Подсветка цветов прямо в коде (например, #ffffff)
+        "Zignd.html-css-class-completion", // Подсказки названий CSS классов в HTML коде
+        // --- Общие инструменты ---
+        "streetsidesoftware.code-spell-checker", // Проверка орфографии (помогает не ошибаться в именах переменных)
+        "MS-CEINTL.vscode-language-pack-ru", // Русский язык для интерфейса VS Code
+        "tamasfe.even-better-toml", // Лучшая поддержка TOML
+    ]
+}

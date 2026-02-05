@@ -1,0 +1,16 @@
+version: "0.2"
+ignorePaths: []
+dictionaryDefinitions: []
+dictionaries: []
+words:
+  - конфигами
+  - asyncio
+  - Docstrings
+  - fastapi
+  - pydantic
+  - Pydantic
+  - pytest
+  - uvicorn
+  - venv
+ignoreWords: []
+import: []

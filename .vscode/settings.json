@@ -1,0 +1,150 @@
+{
+    // --- ИНТЕРФЕЙС И ОБЩЕЕ ---
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Visual Studio Dark", // Можно сменить на Monokai для лучшего контраста
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 1,
+    "window.commandCenter": false,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "explorer.autoReveal": false,
+    "explorer.compactFolders": false,
+    // --- РЕДАКТОР И ФОРМАТИРОВАНИЕ ---
+    "editor.fontFamily": "'CaskaydiaMono Nerd Font Mono', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.wordWrap": "on",
+    "editor.linkedEditing": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.codeLens": false,
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml",
+        "editor.formatOnSave": true,
+        "editor.suggestSelection": "first"
+    },
+    // Настройка схемы для pyproject.toml, чтобы работали подсказки
+    "evenBetterToml.schema.enabled": true,
+    "evenBetterToml.schema.associations": {
+        "pyproject.toml": "https://json.schemastore.org/pyproject.json"
+    },
+    // --- ИИ-ПОМОЩНИКИ (Codeium & Qodo) ---
+    "qodo.testFramework": "pytest",
+    "qodo.suggestions.showCodeLens": true,
+    "qodo.chat.enableContextAwareness": true,
+    "codeium.enableConfig": {
+        "*": true,
+        "markdown": false
+    },
+    // --- PYTHON ---
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "pylint.args": [
+        "--load-plugins",
+        "pylint_pydantic",
+        "--rcfile",
+        "${workspaceFolder}/.pylintrc"
+    ],
+    // Анализ кода Pylance (исправленные параметры)
+    "python.analysis.indexing": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.packageIndexDepths": [
+        {
+            "name": "django",
+            "depth": 3
+        },
+        {
+            "name": "requests",
+            "depth": 3
+        }
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.importFormat": "absolute",
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    // --- ТЕСТИРОВАНИЕ (Pytest) ---
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "tests",
+        "--ignore=.venv"
+    ],
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    // --- HTML, JSON И ВЕРСТКА ---
+    "files.associations": {
+        "**/templates/**/*.html": "django-html",
+        "*.html": "html"
+    },
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "django.snippets.exclude": [
+        "html"
+    ],
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    // --- ТЕРМИНАЛ ---
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        }
+    },
+    // --- ОРФОГРАФИЯ (CSpell) ---
+    "cSpell.language": "en,ru",
+    "cSpell.userWords": [
+        "Безопасная",
+        "добавлено",
+        "Загружаем",
+        "Импортировать",
+        "Каталоги",
+        "лимиты",
+        "подсети",
+        "понял",
+        "Пример",
+        "удалось",
+        "умолчанию",
+        "comcntr",
+        "Doker",
+        "infobase",
+        "ovpn",
+        "sysrq",
+        "ZRTR"
+    ],
+    // --- GIT И ПРОЧЕЕ ---
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "extensions.ignoreRecommendations": true,
+    "mcpServers": {},
+    "cSpell.words": [
+        "pylint"
+    ]
+}

@@ -1,0 +1,27 @@
+[MASTER]
+# Указываем расширение для работы с Pydantic
+extension-pkg-whitelist=pydantic
+
+[MESSAGES CONTROL]
+# Отключаем специфические предупреждения:
+# C0114, C0115, C0116: Отсутствие docstrings (модуля, класса, функции)
+# E0611: No name in module (часто ложное для pydantic)
+# E0213: Method should have "self" as first argument (в FastAPI/Pydantic часто используется cls)
+# W0612: Unused variable (иногда мешает при объявлении зависимостей Depends)
+# R0903: Too few public methods (для моделей данных это норма)
+disable=
+    C0114,
+    C0115,
+    C0116,
+    E0611,
+    E0213,
+    R0903,
+    W0612
+
+[FORMAT]
+# Максимальная длина строки (Black по умолчанию использует 88, можно поставить 100)
+max-line-length=100
+
+[BASIC]
+# Разрешаем короткие имена переменных (например, id, db, i), которые часто нужны в FastAPI
+good-names=i,j,k,ex,Run,_,id,db,app
