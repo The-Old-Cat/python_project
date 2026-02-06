@@ -1,2 +1,1 @@
-# python_project
-Прикладные решения
+# project_name

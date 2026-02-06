@@ -1,21 +1,13 @@
-# Виртуальное окружение
-.venv/
 __pycache__/
-*.py[cod]
-
-# Переменные окружения и секреты
+*.pyc
+.venv/
 .env
-.env.*
-!.env.example
-
-# Базы данных
-*.sqlite3
-*.db
-
-# Логи и временные файлы
-*.log
+uv.lock
+dist/
+build/
 .pytest_cache/
-.pylintdash/
-.pylintrc_v2
-.qodo
-.cspell/
+!data/.gitkeep
+!logs/.gitkeep
+data/*
+logs/*
+
