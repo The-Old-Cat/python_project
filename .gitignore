@@ -10,7 +10,8 @@ build/
 .pylintrc_v2
 .qodo
 .cspell/
-data/*
 logs/*
-!data/.gitkeep
 !logs/.gitkeep
+data/*
+!data/.gitkeep
+
