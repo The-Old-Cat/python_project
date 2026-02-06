@@ -10,3 +10,5 @@ build/
 .pylintrc_v2
 .qodo
 .cspell/
+data/*
+logs/*
