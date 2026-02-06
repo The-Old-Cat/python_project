@@ -1,7 +1,11 @@
 version: "0.2"
 ignorePaths: []
-dictionaryDefinitions: []
-dictionaries: []
+dictionaryDefinitions:
+  - name: custom-dictionary
+    path: ./.cspell/custom-dictionary.txt
+    addWords: true
+dictionaries:
+  - custom-dictionary
 words:
   - конфигами
   - asyncio
@@ -12,7 +16,10 @@ words:
   - Pydantic
   - pytest
   - pywin
+  - psutil
   - uvicorn
   - venv
+  - pythonpath
+  - testpaths
 ignoreWords: []
 import: []
