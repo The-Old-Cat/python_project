@@ -12,3 +12,5 @@ build/
 .cspell/
 data/*
 logs/*
+!data/.gitkeep
+!logs/.gitkeep
