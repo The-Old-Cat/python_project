@@ -17,3 +17,5 @@ __pycache__/
 .pytest_cache/
 .pylintdash/
 .pylintrc_v2
+.qodo
+.cspell/

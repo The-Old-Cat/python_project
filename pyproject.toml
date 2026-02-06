@@ -1,0 +1,57 @@
+[project]
+name = "Project-name"
+version = "0.1.0"
+description = "Project Description"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pywin32>=306",    # Работа с API Windows (службы, реестр)
+    "loguru>=0.7.2",   # Удобное и безопасное логирование
+    "pydantic>=2.6.0", # Валидация входных данных (защита от инъекций)
+]
+
+[tool.uv]
+# Хранить виртуальную среду прямо в папке проекта для изоляции
+dev-dependencies = [
+    "pytest>=8.0.0",
+    "pip-audit>=2.7.0", # Обязательно для проверки уязвимостей
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+########################################################
+####            Не изменяемая секция                ####
+########################################################
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.pytest.ini_options]
+# Указываем pytest, что исходный код в папке src
+pythonpath = ["src"]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+asyncio_mode = "auto"
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = [
+    "C0114",
+    "C0115",
+    "C0116", # Docstrings
+    "E0611", # Pydantic imports
+    "E0213", # FastAPI/Pydantic cls/self
+    "R0903", # Data models
+    "W0612", # Depends(unused)
+]
+
+[tool.pylint.FORMAT]
+max-line-length = 100
+
+[tool.pylint.MASTER]
+load-plugins = ["pylint_pydantic"]
+
+[tool.pylint.BASIC]
+good-names = ["i", "j", "k", "ex", "Run", "_", "id", "db", "app"]
