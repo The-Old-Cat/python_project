@@ -6,6 +6,7 @@ uv.lock
 dist/
 build/
 .pytest_cache/
-data/*
-logs/*
-
+.pylintdash/
+.pylintrc_v2
+.qodo
+.cspell/
